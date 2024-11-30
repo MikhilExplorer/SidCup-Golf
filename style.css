@@ -4,34 +4,49 @@
   box-sizing: border-box;
   font-family: "Montserrat", serif;
   color: white;
+  /* overflow-x: hidden; */
+}
+*::selection {
+  color: #95c11e;
+  background-color: white;
 }
 body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+  background-color: black;
+  width: 7px;
+ 
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #95c11e;
+  border-radius: 100px;
 }
 .nav {
   display: flex;
   align-items: center;
   height: 16vh;
-  padding: 3.75vw 5.5vw;
+  padding: 4.25vw 5.5vw;
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 1;
+  z-index: 100;
 }
 .nav .logo {
   height: 10vh;
   width: 10vw;
+  transition: all 0.2s linear 0.001s;
+  overflow: hidden;
 }
 .nav .logo img {
   height: 100%;
   width: 100%;
-  transition: all 0.2s linear 0.001s;
   cursor: pointer;
 }
-.nav .logo img:hover {
-  height: 9.5vh;
-  width: 9.5vw;
+.nav .logo:hover {
+  padding: 0.25vw 0 0 0.25vw;
 }
 .nav h5 {
   padding: 1.5vw;
@@ -41,22 +56,236 @@ body {
   transition: all 0.02s linear 0.0001s;
 }
 .nav h5:hover {
-  color: black;
+  color: #a7db18;
 }
 video {
   position: fixed;
   height: 100vh;
   width: 100vw;
   object-fit: cover;
-  z-index: -1;
+  z-index: -99;
 }
 .main {
   position: relative;
   background-color: rgba(0, 0, 0, 0.39);
   top: 0;
-  z-index: 0;
 }
 .page1 {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5vw;
+  position: relative;
+  z-index: 10;
+}
+.page1 h1 {
+  font-size: 7.5vw;
+  position: relative;
+  font-weight: 900;
+}
+.page1 h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  -webkit-text-stroke: 1.5px #95c11e;
+  color: black;
+  z-index: -1;
+  top: -5px;
+  left: -5px;
+}
+.page1 h3 {
+  font-size: 2vw;
+}
+.page1 p {
+  width: 41%;
+  font-size: 1.25vw;
+  margin-top: 0.75vw;
+}
+.cursor {
+  position: fixed;
+  background-color: #95c11e;
+  border: none;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  z-index: 100;
+}
+.cursor-blur {
+  height: 500px;
+  width: 500px;
+  background-color: rgba(150, 193, 30, 0.267);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none
+}
+.arrow {
+  position: absolute;
+  bottom: 0;
+  left: -1.75vw;
+  border: 2px #95c11e solid;
+  border-radius: 50%;
+  padding: 6vw 6vw;
+  margin: 0;
+  transition: all 0.4s linear;
+  z-index: 10;
+  cursor: pointer;
+}
+.arrow i {
+  font-size: 3vw;
+}
+.arrow:hover {
+  scale: 0.4;
+  background-color: #95c11e;
+}
+.scroller{
+  /* background-color: red; */
+  display: flex;
+  margin-top: 1vh;
+  overflow-x: auto;
+}
+.scroller::-webkit-scrollbar{
+  display: none;
+}
+.scroller-in{
+  display: flex;
+  animation: 25s linear 0 scroll;
+  animation-iteration-count: infinite;
+}
+.scroller-in h4{
+  white-space: nowrap;
+  font-size: 7.5vw;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 100;
+  margin-left: 2vw;
+  transition: all 0.2s linear;
+}
+.scroller-in h4:hover{
+  color: #95c11e;
+  -webkit-text-stroke: 1px #95c11e;
+  
+}
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.aboutus{
+  display: flex;
+  margin-top: 15vh;
+  padding: 0 7vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
+.aboutus img{
+  height: 30vh;
+  width: 15vw;
+  object-fit: cover;
+  border-radius: 10%;
+  z-index: 10;
+}
+.aboutus .center{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5.5vh;
+  line-height: 4.5vh;
+}
+.aboutus .center h1{
+  font-size: 3.5vw;
+  font-weight: bolder
+}
+.aboutus .center p{
+  width: 80%;
+  font-size: 1.25vw;
+}
+.cards{
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  margin-top: 25vh;
+  padding: 0 5vw;
+  position: relative;
+  z-index: 10;
+}
+.card{
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.card img{
+  height: 85vh;
+  width: 25vw;
+  object-fit: cover;
+  border-radius: 4%;
+}
+.cards .dotted {
+  position: absolute;
+  top: -60px;
+  left: 94px;
+  z-index: 5;
+}
+.cards .dotted{
+  height: 12vh;
+  width: 12vw;
+}
+.card .overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 4%;
+  background-color: #95c11e;
+  padding: 14vh 2vw ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s linear 0s;
+}
+.card .overlay h1{
+  font-size: 3vw;
+  color: black;
+}
+.card .overlay .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2vh;
+}
+.card .overlay .text p{
+  color: black;
+  margin-top: 1vh;
+  line-height: 5vh
+}
+.card .overlay i{
+  position: absolute;
+  right: -32px;
+  top: -32px;
+  font-size: 8vw;
+  font-weight: 100;
+  
+}
+.card:hover .overlay{
+  opacity: 100;
+}
+
+.footer{
+  height:100vh;
+  width:100vw;
 }

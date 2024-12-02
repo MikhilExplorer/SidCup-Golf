@@ -21,6 +21,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -51,12 +52,14 @@
           South East London. Passionate about technology, player development and
           making golf fun and accessible to everyone.
         </p>
-        <div class="arrow">
-          <i class="ri-arrow-down-line"></i>
-        </div>
+        <a href="#scroller">
+          <div class="arrow">
+            <i class="ri-arrow-down-line"></i>
+          </div>
+        </a>
       </div>
-      <div class="page2">
-        <div class="scroller">
+      <div class="page2" id="page2">
+        <div class="scroller" id="scroller">
           <div class="scroller-in">
             <h4>TOPTRACER RANGE</h4>
             <h4>GOLF LESSONS</h4>
@@ -97,26 +100,26 @@
               alt="Dots Decoration"
             />
           </div>
-         
-            <div class="card">
-              <img src="./assets/card1.avif" alt="" />
-              <div class="overlay">
-                <i class="ri-arrow-right-circle-line"></i>
-                <h1>TOPRACER RANGE</h1>
-                <div class="text">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum sequi harum debitis pariatur quasi et? Aliquid a
-                    dolorem maiores praesentium magni repellendus c
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Amet sunt nobis consequuntur ea dolores velit veniam sint
-                  </p>
-                </div>
+
+          <div class="card">
+            <img src="./assets/card1.avif" alt="" />
+            <div class="overlay">
+              <i class="ri-arrow-right-circle-line"></i>
+              <h1>TOPRACER RANGE</h1>
+              <div class="text">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                  sequi harum debitis pariatur quasi et? Aliquid a dolorem
+                  maiores praesentium magni repellendus c
+                </p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet
+                  sunt nobis consequuntur ea dolores velit veniam sint
+                </p>
               </div>
             </div>
-         
+          </div>
+
           <div class="card">
             <img src="./assets/card2.webp" alt="" />
             <div class="overlay">
@@ -154,10 +157,51 @@
             </div>
           </div>
         </div>
+        <div class="signup">
+          <div class="left">
+            <img src="./assets/dots-side.svg" alt="#" />
+          </div>
+          <div class="text">
+            <h1>Sign up for Sidcup News and Special</h1>
+            <h1>Offers</h1>
+            <h1>Straight to Your Inbox</h1>
+          </div>
+          <div class="right">
+            <img src="./assets/dots-side.svg" alt="#" />
+          </div>
+        </div>
+      </div>
+      <div class="page3">
+        <div class="image-swiper">
+          <div class="container">
+            <img src="./assets/photo 1.jpg" alt="">
+            <img src="./assets/photo 2.jpg" alt="">
+            <img src="./assets/photo 3.jpg" alt="">
+            <img src="./assets/photo 5.jpg" alt="">
+            <img src="./assets/photo 6.jpg" alt="">
+            <img src="./assets/photo 7.jpg" alt="">
+            <img src="./assets/photo 8.jpg" alt="">
+            <img src="./assets/photo 9.jpg" alt="">
+            <img src="./assets/photo 10.jpg" alt="">
+          </div>
+          <div class="container">
+            <img src="./assets/photo 1.jpg" alt="">
+            <img src="./assets/photo 2.jpg" alt="">
+            <img src="./assets/photo 3.jpg" alt="">
+            <img src="./assets/photo 5.jpg" alt="">
+            <img src="./assets/photo 6.jpg" alt="">
+            <img src="./assets/photo 7.jpg" alt="">
+            <img src="./assets/photo 8.jpg" alt="">
+            <img src="./assets/photo 9.jpg" alt="">
+            <img src="./assets/photo 10.jpg" alt="">
+          </div>
+        </div>
+        <div class="follow">
+          <h1><i class="ri-instagram-line"></i>Follow us on instagram</h1>
+        </div>
       </div>
       <div class="footer"></div>
     </div>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -171,6 +215,5 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="app.js"></script>
-    
   </body>
 </html>

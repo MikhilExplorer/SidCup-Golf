@@ -15,12 +15,11 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   background-color: black;
   width: 7px;
- 
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: #95c11e;
   border-radius: 100px;
 }
@@ -121,7 +120,7 @@ video {
   position: fixed;
   filter: blur(80px);
   z-index: 1;
-  pointer-events: none
+  pointer-events: none;
 }
 .arrow {
   position: absolute;
@@ -142,21 +141,24 @@ video {
   scale: 0.4;
   background-color: #95c11e;
 }
-.scroller{
+.page2{
+  scroll-behavior: smooth;
+}
+.scroller {
   /* background-color: red; */
   display: flex;
   margin-top: 1vh;
   overflow-x: auto;
 }
-.scroller::-webkit-scrollbar{
+.scroller::-webkit-scrollbar {
   display: none;
 }
-.scroller-in{
+.scroller-in {
   display: flex;
   animation: 25s linear 0 scroll;
   animation-iteration-count: infinite;
 }
-.scroller-in h4{
+.scroller-in h4 {
   white-space: nowrap;
   font-size: 7.5vw;
   -webkit-text-stroke: 1px #fff;
@@ -166,20 +168,19 @@ video {
   margin-left: 2vw;
   transition: all 0.2s linear;
 }
-.scroller-in h4:hover{
+.scroller-in h4:hover {
   color: #95c11e;
   -webkit-text-stroke: 1px #95c11e;
-  
 }
 @keyframes scroll {
-  0%{
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(-100%);
   }
 }
-.aboutus{
+.aboutus {
   display: flex;
   margin-top: 15vh;
   padding: 0 7vw;
@@ -188,14 +189,14 @@ video {
   z-index: 10;
   position: relative;
 }
-.aboutus img{
+.aboutus img {
   height: 30vh;
   width: 15vw;
   object-fit: cover;
   border-radius: 10%;
   z-index: 10;
 }
-.aboutus .center{
+.aboutus .center {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -204,15 +205,15 @@ video {
   gap: 5.5vh;
   line-height: 4.5vh;
 }
-.aboutus .center h1{
+.aboutus .center h1 {
   font-size: 3.5vw;
-  font-weight: bolder
+  font-weight: bolder;
 }
-.aboutus .center p{
+.aboutus .center p {
   width: 80%;
   font-size: 1.25vw;
 }
-.cards{
+.cards {
   display: flex;
   width: 100vw;
   justify-content: space-around;
@@ -221,12 +222,12 @@ video {
   position: relative;
   z-index: 10;
 }
-.card{
+.card {
   position: relative;
   z-index: 10;
   overflow: hidden;
 }
-.card img{
+.card img {
   height: 85vh;
   width: 25vw;
   object-fit: cover;
@@ -238,11 +239,11 @@ video {
   left: 94px;
   z-index: 5;
 }
-.cards .dotted{
+.cards .dotted {
   height: 12vh;
   width: 12vw;
 }
-.card .overlay{
+.card .overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -250,7 +251,7 @@ video {
   width: 100%;
   border-radius: 4%;
   background-color: #95c11e;
-  padding: 14vh 2vw ;
+  padding: 14vh 2vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -258,34 +259,112 @@ video {
   opacity: 0;
   transition: all 0.3s linear 0s;
 }
-.card .overlay h1{
+.card .overlay h1 {
   font-size: 3vw;
   color: black;
 }
-.card .overlay .text{
+.card .overlay .text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2vh;
 }
-.card .overlay .text p{
+.card .overlay .text p {
   color: black;
   margin-top: 1vh;
-  line-height: 5vh
+  line-height: 5vh;
 }
-.card .overlay i{
+.card .overlay i {
   position: absolute;
   right: -32px;
   top: -32px;
   font-size: 8vw;
   font-weight: 100;
-  
 }
-.card:hover .overlay{
+.card:hover .overlay {
   opacity: 100;
 }
+.signup {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(#a5d621, #97c31f, #5eb329);
+  margin-top: 15vh;
+  align-items: center;
+  overflow: hidden;
+}
+.signup img {
+  height: 90%;
+  width: 20vw;
+  object-fit: cover;
+}
+.signup .left img {
+  transform: rotate(180deg);
+}
 
-.footer{
-  height:100vh;
-  width:100vw;
+.signup .text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+.signup .text h1 {
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+
+.image-swiper{
+  overflow-x: scroll;
+  display: flex;
+  margin-top: 25vh;
+  transform: rotate(-3deg);
+  gap: 5vw;
+  z-index: 10;
+  position: relative;
+}
+.image-swiper .container{
+  display: flex;
+  gap: 5vw;
+  animation: scroll 14s linear 0s infinite ;
+
+}
+.image-swiper .container img{
+  height: 30vh;
+  width: 15vw;
+  object-fit: cover;
+  border-radius: 5%
+}
+.image-swiper::-webkit-scrollbar{
+  display: none;
+}
+.page3 .follow{
+  display: flex;
+  justify-content: flex-end;
+  transform: rotate(-3deg);
+  margin-top: 3vh;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.page3 .follow i{
+  margin-right: 0.5vw;
+}
+.page3 .follow h1{
+  font-weight: 800;
+  font-size: 1.45vw;
+  margin-right:15vw;
+}
+.page3 .follow h1:hover{
+  color: #95c11e;
+}
+.page3 .follow h1 i{
+  color: inherit;
+}
+.footer {
+  height: 100vh;
+  width: 100vw;
 }

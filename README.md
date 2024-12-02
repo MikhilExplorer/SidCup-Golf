@@ -1,25 +1,36 @@
 # Sidcup Family Golf Website
 
-**Sidcup Family Golf** is a dynamic and visually engaging website designed to promote a family-friendly golf venue in South East London. The platform leverages modern web animation technologies to deliver an immersive user experience.
+[Visit the Live Website Here](https://mikhilexplorer.github.io/sidcup-family-golf/)
+
+**Sidcup Family Golf** is a visually captivating and interactive website created to showcase a family-friendly golf venue in South East London. The site leverages modern animation and design techniques to create an immersive experience for users.
 
 ## Features
 
-- **Custom Cursor:** Interactive cursor that responds to hover actions on menu items and cards.
-- **GSAP Animations:** Smooth, scroll-triggered animations for dynamic transitions and effects.
-- **Video Background:** An engaging fullscreen video sets the tone on the homepage.
-- **Responsive Design:** Fully optimized for mobile and desktop views.
-- **Interactive Content:** Scroll-triggered effects enhance user engagement for images, text, and buttons.
+- **Custom Cursor**: An interactive cursor that enhances engagement with hover effects.
+- **Smooth Animations**: Powered by GSAP (GreenSock Animation Platform) for seamless transitions.
+- **Scroll Interactions**: Includes effects for images, text, and buttons triggered by scrolling.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Video Background**: Adds a visually engaging element to the homepage.
 
 ## Technologies Used
 
-- **HTML5:** Provides the structure of the website.
-- **CSS3:** Custom styling for layout, responsiveness, and visual effects.
-- **JavaScript:** Enables dynamic functionality, including cursor effects.
-- **GSAP (GreenSock Animation Platform):** Powers the animations and transitions.
-- **Google Fonts and Remix Icons:** Adds modern typography and intuitive icons.
+- **HTML5**: For building the structure of the website.
+- **CSS3**: For styling and layout.
+- **JavaScript**: For dynamic features and interactions.
+- **GSAP**: To create animations and effects.
+- **Google Fonts and Remix Icons**: For modern typography and icons.
 
-## How to Run
+## Future Enhancements
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/MikhilExplorer/sidcup-family-golf.git
+- Integrating a booking system for reserving golf sessions.
+- Adding a visitor feedback form.
+- Displaying a live weather widget for outdoor golfing conditions.
+
+## Contributing
+
+Contributions are welcome! Please feel free to fork the repository, create a new branch, and submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+   

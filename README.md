@@ -28,7 +28,7 @@
 
 ## Contributing
 
-Contributions are welcome! Please feel free to fork the repository, create a new branch, and submit a pull request.
+Contributions are welcome! Please feel free to fork the repository, create a new branch, and submit a pull request
 
 ## License
 

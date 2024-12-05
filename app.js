@@ -36,16 +36,27 @@ gsap.to(".main",{
         scrub:2
     }
 })
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    
-  });
+gsap.from(".aboutus",{
+    y:"50",
+    opacity:"0",
+    duration:"0.75",
+    scrollTrigger:{
+        trigger:".aboutus",
+        scroller:"body",
+        // markers:true,
+        start:"top 95%",
+  
+    }
+})
+gsap.from(".cards",{
+    y:"50",
+    opacity:"0",
+    duration:"0.75",
+    scrollTrigger:{
+        trigger:".cards",
+        scroller:"body",
+        // markers:true,
+        start:"top 97%",
+  
+    }
+})

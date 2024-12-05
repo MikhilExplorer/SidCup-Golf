@@ -10,6 +10,10 @@
   color: #95c11e;
   background-color: white;
 }
+html{
+  scroll-padding-top: 20vh;
+  scroll-behavior: smooth;
+}
 body {
   height: 100%;
   width: 100%;
@@ -17,7 +21,7 @@ body {
 }
 body::-webkit-scrollbar {
   background-color: black;
-  width: 7px;
+  width: 9px;
 }
 body::-webkit-scrollbar-thumb {
   background-color: #95c11e;
@@ -33,7 +37,7 @@ body::-webkit-scrollbar-thumb {
   width: 100vw;
   z-index: 100;
 }
-.nav .logo {
+.logo {
   height: 10vh;
   width: 10vw;
   transition: all 0.2s linear 0.001s;
@@ -92,7 +96,7 @@ video {
   -webkit-text-stroke: 1.5px #95c11e;
   color: black;
   z-index: -1;
-  top: -5px;
+  top: -3px;
   left: -5px;
 }
 .page1 h3 {
@@ -321,7 +325,7 @@ video {
 .image-swiper{
   overflow-x: scroll;
   display: flex;
-  margin-top: 25vh;
+  margin-top: 20vh;
   transform: rotate(-3deg);
   gap: 5vw;
   z-index: 10;
@@ -330,7 +334,7 @@ video {
 .image-swiper .container{
   display: flex;
   gap: 5vw;
-  animation: scroll 14s linear 0s infinite ;
+  animation: scroll 30s linear 0s infinite ;
 
 }
 .image-swiper .container img{
@@ -363,6 +367,9 @@ video {
 }
 .page3 .follow h1 i{
   color: inherit;
+}
+.nav h5:hover  .cursor{
+  scale: 5;
 }
 .footer {
   height: 100vh;

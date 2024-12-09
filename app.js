@@ -60,3 +60,51 @@ gsap.from(".cards",{
   
     }
 })
+gsap.to("#quote1",{
+    x:"9vw",
+    y:"5vh",
+    duration:0.9,
+    ease: "power1.in",
+    scrollTrigger:{
+        trigger:".review",
+        scroller:"body",
+        // markers:true,
+        start:"top 65%",
+        // scrub:2, 
+
+    },
+})
+gsap.to("#quote2",{
+    x:"-9vw",
+    y:"-5vh",
+    duration:0.9,
+    ease: "power1.in",
+    scrollTrigger:{
+        trigger:".review",
+        scroller:"body",
+        // markers:true
+        start:"top 65%" ,
+        // scrub:2,
+    },
+})
+
+let highlight = document.querySelectorAll('.highlight');
+let up = document.querySelector('#up');
+highlight.forEach(el => {
+  el.addEventListener('mouseenter', function() {
+   el.style.color="white",
+   up.style.WebkitTextStroke="1px #95c11e"
+  });
+  el.addEventListener('mouseleave', function() {
+    el.style.color="black"
+    up.style.WebkitTextStroke="1px white"
+   });
+});
+gsap.from(up, {
+    y: "30px",
+    duration: 2,
+    scrollTrigger: {
+        trigger: ".highlight",
+        scroller: "body",
+    },
+});

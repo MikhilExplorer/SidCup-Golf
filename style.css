@@ -11,10 +11,10 @@
   background-color: white;
 }
 html{
-  scroll-padding-top: 20vh;
+  /* scroll-padding-top: 20vh; */
   scroll-behavior: smooth;
 }
-body {
+html,body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
@@ -26,6 +26,10 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #95c11e;
   border-radius: 100px;
+}
+.main{
+  width: 100vw;
+  min-height: 100vh;
 }
 .nav {
   display: flex;
@@ -43,12 +47,12 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.2s linear 0.001s;
   overflow: hidden;
 }
-.nav .logo img {
+.logo img {
   height: 100%;
   width: 100%;
   cursor: pointer;
 }
-.nav .logo:hover {
+.logo:hover {
   padding: 0.25vw 0 0 0.25vw;
 }
 .nav h5 {
@@ -167,8 +171,8 @@ video {
   font-size: 7.5vw;
   -webkit-text-stroke: 1px #fff;
   color: transparent;
-  font-family: "Lilita One", sans-serif;
-  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
   margin-left: 2vw;
   transition: all 0.2s linear;
 }
@@ -371,7 +375,182 @@ video {
 .nav h5:hover  .cursor{
   scale: 5;
 }
+.review{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 35vh;
+  position: relative;
+}
+.review img{
+  height: 8vh;
+  width: 8vw;
+  position: absolute;
+}
+.review #quote1{
+  left: 5vw;
+  top: -20vh;
+}
+.review #quote2{
+  right: 5vw;
+  bottom: -20vh;
+}
+.review p{
+  font-size:2vw;
+  width: 60%;
+  line-height: 2.75vw;
+  text-align: center;
+  font-weight: bold;
+}
+.bottom{
+  margin-top: 45vh;
+  position: relative;
+}
+.bottom>h1{
+  z-index: 0;
+  position: absolute;
+  font-size: 5.98vw;
+  font-weight: 900;
+  top: -11vh;
+  left: 8.5vw;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  paint-order: stroke fill;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.2s linear 0s;
+}
+
+.bottom .highlights{
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+.bottom .highlight img{
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  z-index: 1;
+  transition: all 0.25s linear 0s;
+}
+.highlight{
+  /* border: 2px solid #95c11e; */
+  background-color: #95c11e;
+  /* padding: 7.5vh 2vw; */
+  height: 23vh;
+  width: 26vw;
+  border-radius: 1vw;
+  position: relative;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.highlight h1{
+  color: inherit;
+  z-index: 5;
+  position: relative;
+  font-weight: 900;
+  font-size: 2.8vw;
+  text-align: center;
+}
+.highlight:hover img{
+  opacity: 1;
+}
 .footer {
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
+  background: linear-gradient(#a5d621, #97c31f, #5eb329);
+  position: relative; 
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8vh 0vw 2vh 5vw;
+  z-index: 10;
+}
+.footer .contain{
+  height: 93%;
+  width: 30%;
+  object-fit: cover;
+  position: absolute;
+  left: -2vw;
+  top: 2vh;
+}
+.footer .contain img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: rotate(180deg);
+  z-index: 0;
+}
+.footer .top{
+  display: flex;
+  justify-content: space-around;
+  gap: 4vw;
+  width: 100%;
+  margin-left: 5vw;
+  position: relative;
+}
+.footer .part1{
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.company-packet{
+  margin-left: 1.75vw;
+}
+.company-packet i{
+  font-size: 2vw;
+  color: black;
+}
+.footer .top .part4 p{
+  width: 30%;
+}
+.part2,.part3{
+  line-height: 3vw;
+}
+.footer h1{
+  color: black;
+  font-weight: 900;
+}
+.footer p{
+  color: black;
+}
+.footer h3{
+  color: black;
+  font-weight: 900;
+}
+.part4{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.footer .logo {
+  height: 12vh;
+  width: 12vw;
+}
+.footer .below{
+  display: flex;
+  justify-content: space-between;
+  gap: 17vw;
+  position: relative;
+  z-index: inherit;
+}
+.footer a{
+  text-decoration: none;
+  color: black;
+}
+.footer a:hover{
+  color: white;
+}
+.footer i:hover{
+  color: white;
+  cursor: pointer;
 }

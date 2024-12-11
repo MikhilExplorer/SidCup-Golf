@@ -1,0 +1,299 @@
+@media (max-width: 700px) {
+  body {
+    height: fit-content;
+    overflow: visible;
+  }
+  .nav .options {
+    display: none;
+  }
+  .nav .logo {
+    height: 12vh;
+    width: 12vw;
+  }
+  .nav button {
+    padding: 2vw 3vw;
+    border-radius: 3vw;
+    font-size: 1.75vw;
+  }
+  .nav {
+    justify-content: space-between;
+  }
+  .page1 h1 {
+    font-size: 8.5vw;
+    margin-bottom: 1vh;
+  }
+  .page1 h1::before {
+    top: -2px;
+    left: -4px;
+  }
+  .page1 h3 {
+    font-size: 3.5vw;
+  }
+  .page1 p {
+    width: 90%;
+    font-size: 2.75vw;
+  }
+  .cursor {
+    display: none;
+  }
+  .cursor-blur {
+    display: none;
+  }
+  .arrow {
+    padding: 12vw 12vw;
+    left: -35px;
+  }
+  .arrow i {
+    font-size: 8vw;
+  }
+  .scroller-in h4 {
+    font-size: 9vw;
+  }
+  .aboutus {
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 2vh;
+  }
+  .aboutus img {
+    object-fit: cover;
+  }
+  .aboutus :nth-child(1) {
+    order: 1;
+    height: 30vh;
+    width: 45vw;
+    border-radius: 5%;
+  }
+  .aboutus :nth-child(2) {
+    order: 3;
+  }
+  .aboutus :nth-child(3) {
+    order: 2;
+    width: 45vw;
+    height: 30vh;
+    border-radius: 5%;
+  }
+  .aboutus .center {
+    gap: 3vh;
+    line-height: 4.5vh;
+    margin-top: 3vh;
+  }
+  .aboutus .center h1 {
+    font-size: 5vw;
+    height: 5vw;
+    width: 100vw;
+    font-weight: 900;
+  }
+  .aboutus .center p {
+    width: 90%;
+    font-size: 2.25vw;
+    line-height: 6.25vw;
+  }
+  .cards {
+    flex-wrap: wrap;
+    gap: 3vh;
+    margin-top: 15vh;
+  }
+  .card {
+    height: 45vh;
+    width: 100vw;
+  }
+  .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4%;
+  }
+  .cards .dotted {
+    height: 20vh;
+    width: 20vw;
+    top: -40px;
+    left: 24px;
+  }
+  .card .overlay {
+    padding: 12vh 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+  }
+  .card .overlay h1 {
+    font-size: 4.5vw;
+    font-weight: 700;
+    margin-bottom: 1vh;
+  }
+  .card .overlay .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
+  }
+  .card .overlay .text p {
+    color: black;
+    margin-top: 0.5vh;
+    line-height: 3.5vh;
+  }
+  .card .overlay i {
+    right: -27px;
+    top: -27px;
+    font-size: 17vw;
+  }
+  .signup {
+    width: 100vw;
+    height: 25vh;
+  }
+  .signup .text h1 {
+    font-weight: 900;
+    font-size: 4vw;
+  }
+  .image-swiper {
+    margin-top: 10vh;
+  }
+  .image-swiper .container img {
+    height: 30vh;
+    width: 45vw;
+  }
+  .page3 .follow {
+    transform: rotate(-4deg);
+  }
+  .page3 .follow h1 {
+    font-size: 3.5vw;
+  }
+  .review {
+    margin-top: 35vh;
+    position: relative;
+  }
+  .review p {
+    font-size: 4vw;
+    width: 70%;
+    line-height: 5.75vw;
+  }
+  .bottom {
+    margin-top: 25vh;
+  }
+  .bottom > h1 {
+    top: -3.5vh;
+    left: 7.5vw;
+  }
+
+  .bottom .highlights {
+    gap: 3vw;
+    flex-wrap: wrap;
+  }
+  .bottom .highlight img {
+    opacity: 1;
+  }
+  .highlight {
+    height: 25vh;
+    width: 95vw;
+    overflow: hidden;
+    border-radius: 2%;
+  }
+  .highlight h1 {
+    font-size: 4.8vw;
+    color: white;
+  }
+  .highlight:hover img {
+    scale: 1.1;
+  }
+  .footer {
+    height: 80vh;
+    width: 100vw;
+    padding: 3vh 0vw 2vh 5vw;
+  }
+  .footer .contain {
+    height: 50%;
+    width: 30%;
+    object-fit: cover;
+    position: absolute;
+    left: 2vw;
+    bottom: 0px;
+  }
+  .footer .contain img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: rotate(180deg);
+    z-index: 0;
+  }
+
+  .footer .top {
+    display: flex;
+    justify-content: space-around;
+    gap: 0vw;
+    width: 100%;
+    margin-left: 5vw;
+    position: relative;
+    flex-direction: column;
+  }
+  .footer .part1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0vh;
+  }
+  .company-packet {
+    margin-right: 4.75vw;
+  }
+  .company-packet i {
+    font-size: 4vw;
+    color: black;
+  }
+  .footer .part1 h1 {
+    font-size: 0.5vw;
+    line-height: 1vh;
+    margin-bottom: 4vh;
+  }
+  .footer .top .part4 p {
+    width: 30%;
+    font-size: 3vw;
+  }
+  .part2,
+  .part3 {
+    line-height: 5vw;
+    font-size: 2vw;
+  }
+  .footer h1 {
+    color: black;
+    font-weight: 900;
+  }
+  .footer p {
+    color: black;
+    font-size: 2vw;
+  }
+  .footer h3 {
+    color: black;
+    font-weight: 900;
+  }
+  .part4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-top: 3vh;
+  }
+  .footer .logo {
+    height: 12vh;
+    width: 12vw;
+  }
+  .footer .below {
+    display: flex;
+
+    gap: 4vw;
+    position: relative;
+    z-index: inherit;
+    flex-direction: column;
+  }
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+  .footer a:hover {
+    color: white;
+  }
+  .footer i:hover {
+    color: white;
+    cursor: pointer;
+  }
+}

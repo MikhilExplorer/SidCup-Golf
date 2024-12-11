@@ -17,6 +17,19 @@ document.addEventListener("mousemove", function (dets) {
     y: dets.y - 250,
   });
 });
+let btn = document.querySelectorAll("button");
+let p = document.querySelectorAll("button p");
+console.log(btn[0].style);
+btn.forEach((button) => {
+  button.addEventListener("mouseenter", function () {
+    button.style.color = "black";
+  });
+  button.addEventListener("mouseleave", function () {
+    button.style.color = "white";
+
+  });
+});
+
 gsap.to(".nav", {
   backgroundColor: "black",
   height: "15vh",
@@ -68,11 +81,11 @@ gsap.from(".cards", {
 gsap.to("#quote1", {
   x: "9vw",
   y: "5vh",
-  duration: 1,        // Smooth animation duration
-  ease: "power1.out", // Natural easing
+  duration: 1, 
+  ease: "power1.out", 
   scrollTrigger: {
-    trigger: "#quote1", // Element-specific trigger
-    start: "top -285%",   // Fires only when #quote1 enters 85% of viewport height
+    trigger: "#quote1", 
+    start: "top -285%", 
   },
 });
 
@@ -80,16 +93,13 @@ gsap.to("#quote1", {
 gsap.to("#quote2", {
   x: "-9vw",
   y: "-5vh",
-  duration: 1,        // Smooth animation duration
-  ease: "power1.out", // Natural easing
+  duration: 1, 
+  ease: "power1.out", 
   scrollTrigger: {
-    trigger: "#quote2", // Element-specific trigger
-    start: "top -265%",   // Fires only when #quote2 enters 85% of viewport height
+    trigger: "#quote2", 
+    start: "top -265%", 
   },
 });
-
-
-
 
 let highlight = document.querySelectorAll(".highlight");
 let up = document.querySelector("#up");
@@ -109,20 +119,20 @@ gsap.from(up, {
     trigger: ".highlight",
     scroller: "body",
     // markers:true,
-    start:"bottom -300%",
+    start: "bottom -300%",
   },
 });
 
-// down arrow page2 
+// down arrow page2
 const arrow = document.querySelector(".arrow");
 arrow.addEventListener("click", () => {
-    const page2 = document.querySelector(".page2");
-    // Calculate the position to scroll to, adjusting for the 100px navbar
-    const offsetPosition = page2.getBoundingClientRect().top -  100;
+  const page2 = document.querySelector(".page2");
+  // Calculate the position to scroll to, adjusting for the 100px navbar
+  const offsetPosition = page2.getBoundingClientRect().top - 100;
 
-    // Scroll the page to that position smoothly
-    window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-    });
+  // Scroll the page to that position smoothly
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
 });

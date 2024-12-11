@@ -21,7 +21,7 @@ html,body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  /* height: auto; */
+  height: auto;
 }
 body::-webkit-scrollbar {
   background-color: black;
@@ -45,6 +45,9 @@ body::-webkit-scrollbar-thumb {
   width: 100vw;
   z-index: 100;
 }
+.nav .options{
+  display: flex;
+}
 .logo {
   height: 10vh;
   width: 10vw;
@@ -60,7 +63,7 @@ body::-webkit-scrollbar-thumb {
   padding: 0.25vw 0 0 0.25vw;
 }
 .nav h5 {
-  padding: 1.5vw;
+  padding: 0.75vw;
   font-size: 1.15vw;
   font-weight: normal;
   cursor: pointer;
@@ -68,6 +71,41 @@ body::-webkit-scrollbar-thumb {
 }
 .nav h5:hover {
   color: #a7db18;
+}
+.btns{
+  display: flex;
+  gap: 2vw;
+  margin-left: 1vw;
+}
+.nav button{
+  background-color: black;
+  padding: 1vw 1.65vw;
+  border-radius: 1.5vw;
+  border: 1.5px solid #95c11e;
+  font-weight: 500;
+  font-size: 1vw;
+  position: relative;
+  overflow: hidden;
+  z-index: 12;
+}
+.nav button p{
+  z-index: 12;
+}
+.nav button::before{
+  content: "";
+  height: 150%;
+  width: 150%;
+  border-radius: 30%;
+  border: 5px solid green;
+  position: absolute;
+  background-color: #95c11e;
+  top: 109%;
+  left: -8%;
+  transition: all 0.1s linear 0s;
+  z-index: -1;
+}
+.nav button:hover::before{
+  top:-9px
 }
 video {
   position: fixed;
@@ -109,6 +147,7 @@ video {
 }
 .page1 h3 {
   font-size: 2vw;
+  font-weight: 700;
 }
 .page1 p {
   width: 41%;

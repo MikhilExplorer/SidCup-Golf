@@ -1,7 +1,7 @@
-document.addEventListener("keydown", function () {
+document.addEventListener("wheel", function () {
   ScrollTrigger.refresh();
 });
-document.addEventListener("wheel", function () {
+document.addEventListener("keydown", function () {
   ScrollTrigger.refresh();
 });
 let cursor = document.querySelector(".cursor");
@@ -110,3 +110,18 @@ gsap.from(up, {
     scroller: "body",
   },
 });
+
+// down arrow page2 
+const arrow = document.querySelector(".arrow");
+const arrow_icon = document.querySelector(".arrow i");
+arrow.addEventListener("click", () => {
+ const page2 = document.querySelector("#page2");
+ console.log("clicked")
+ // Calculate the position to scroll to, adjusting for the 100px navbar
+ const offsetPosition = page2.getBoundingClientRect().top - 100;
+ // Scroll the page to that position smoothly
+ window.scrollTo({
+ top: offsetPosition,
+ behavior: 'smooth'
+ })
+})

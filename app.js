@@ -113,15 +113,14 @@ gsap.from(up, {
 
 // down arrow page2 
 const arrow = document.querySelector(".arrow");
-const arrow_icon = document.querySelector(".arrow i");
 arrow.addEventListener("click", () => {
- const page2 = document.querySelector("#page2");
- console.log("clicked")
- // Calculate the position to scroll to, adjusting for the 100px navbar
- const offsetPosition = page2.getBoundingClientRect().top - 100;
- // Scroll the page to that position smoothly
- window.scrollTo({
- top: offsetPosition,
- behavior: 'smooth'
- })
-})
+    const page2 = document.querySelector(".page2");
+    // Calculate the position to scroll to, adjusting for the 100px navbar
+    const offsetPosition = page2.getBoundingClientRect().top -  100;
+
+    // Scroll the page to that position smoothly
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
+});

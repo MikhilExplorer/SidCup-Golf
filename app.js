@@ -1,3 +1,9 @@
+document.addEventListener('keydown', function () {
+    ScrollTrigger.refresh();
+   });
+document.addEventListener('scroll', function () {
+    ScrollTrigger.refresh();
+   });
 let cursor = document.querySelector(".cursor")
 let main=document.querySelector(".main")
 let blur=document.querySelector(".cursor-blur")

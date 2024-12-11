@@ -11,7 +11,10 @@
   background-color: white;
 }
 html{
-  /* scroll-padding-top: 20vh; */
+  scroll-padding-top: 20vh;
+  scroll-behavior: smooth;
+}
+html:focus-within {
   scroll-behavior: smooth;
 }
 html,body {
@@ -27,10 +30,10 @@ body::-webkit-scrollbar-thumb {
   background-color: #95c11e;
   border-radius: 100px;
 }
-.main{
+/* .main{
   width: 100vw;
   min-height: 100vh;
-}
+} */
 .nav {
   display: flex;
   align-items: center;

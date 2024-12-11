@@ -38,58 +38,58 @@ gsap.to(".main", {
     scroller: "body",
     // markers:true,
     start: "top -7%",
-    end: "top -70%",
+    end: "top -60%",
     scrub: 2,
   },
 });
 gsap.from(".aboutus", {
   y: "50",
   opacity: "0",
-  duration: "0.75",
+  duration: "0.85",
   scrollTrigger: {
     trigger: ".aboutus",
     scroller: "body",
     // markers:true,
-    start: "top 95%",
+    start: "bottom 95%",
   },
 });
 gsap.from(".cards", {
   y: "50",
   opacity: "0",
-  duration: "0.75",
+  duration: "1",
   scrollTrigger: {
     trigger: ".cards",
     scroller: "body",
     // markers:true,
-    start: "top 97%",
+    start: "bottom 97%",
   },
 });
+// Quote 1 Animation
 gsap.to("#quote1", {
   x: "9vw",
   y: "5vh",
-  duration: 0.9,
-  ease: "power1.in",
+  duration: 1,        // Smooth animation duration
+  ease: "power1.out", // Natural easing
   scrollTrigger: {
-    trigger: ".review",
-    scroller: "body",
-    // markers:true,
-    start: "top 65%",
-    // scrub:2,
+    trigger: "#quote1", // Element-specific trigger
+    start: "top -285%",   // Fires only when #quote1 enters 85% of viewport height
   },
 });
+
+// Quote 2 Animation
 gsap.to("#quote2", {
   x: "-9vw",
   y: "-5vh",
-  duration: 0.9,
-  ease: "power1.in",
+  duration: 1,        // Smooth animation duration
+  ease: "power1.out", // Natural easing
   scrollTrigger: {
-    trigger: ".review",
-    scroller: "body",
-    // markers:true
-    start: "top 65%",
-    // scrub:2,
+    trigger: "#quote2", // Element-specific trigger
+    start: "top -265%",   // Fires only when #quote2 enters 85% of viewport height
   },
 });
+
+
+
 
 let highlight = document.querySelectorAll(".highlight");
 let up = document.querySelector("#up");
@@ -108,6 +108,8 @@ gsap.from(up, {
   scrollTrigger: {
     trigger: ".highlight",
     scroller: "body",
+    // markers:true,
+    start:"bottom -300%",
   },
 });
 
